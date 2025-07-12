@@ -78,8 +78,8 @@ fn main() {
 
     ];
 
-    draw_polygon(&mut image, &points, Color::RED);
-    fill_polygon(&mut image, &points, Color::WHITE);
+    draw_polygon(&mut image, &points, Color::WHITE);
+    fill_polygon(&mut image, &points, Color::RED);
 
 
    
