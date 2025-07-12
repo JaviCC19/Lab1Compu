@@ -71,7 +71,7 @@ fn main() {
         .title("Polígono con Raylib")
         .build();
 
-    let mut image = Image::gen_image_color(screen_width, screen_height, Color::BLUE);
+    let mut image = Image::gen_image_color(screen_width, screen_height, Color::BLACK);
 
     let points = vec![
         (165, 380), (185, 360), (180, 330), (207, 345), (233, 330),
@@ -79,48 +79,11 @@ fn main() {
         (165, 380),
     ];
 
-    draw_polygon(&mut image, &points, Color::RED);
+    draw_polygon(&mut image, &points, Color::WHITE);
 
-    fill_polygon(&mut image, &points, Color::RED);
-
-    let points = vec![
-        (321, 335), (288, 286), (339, 251), (374, 302), (321, 335),
-    ];
-
-    draw_polygon(&mut image, &points, Color::GREEN);
-    fill_polygon(&mut image, &points, Color::GREEN);
-
-    let points = vec![
-       (377, 249), (411, 197), (436, 249), (377, 249),
-
-    ];
-
-    draw_polygon(&mut image, &points, Color::YELLOW);
     fill_polygon(&mut image, &points, Color::YELLOW);
 
-    let points = vec![
-        (413, 177), (448, 159), (502, 88), (553, 53), (535, 36), (676, 37), (660, 52),
-        (750, 145), (761, 179), (672, 192), (659, 214), (615, 214), (632, 230), (580, 230),
-        (597, 215), (552, 214), (517, 144), (466, 180),
-    ];
-
-    draw_polygon(&mut image, &points, Color::PURPLE);
-    fill_polygon(&mut image, &points, Color::PURPLE);
-
-    let points = vec![
-        (682, 175), (708, 120), (735, 148), (739, 170), (682, 175),
-    ];
-
-    draw_polygon(&mut image, &points, Color::BLUE);
-    fill_polygon(&mut image, &points, Color::BLUE);
-
-
-    while !rl.window_should_close() {
-        let mut d = rl.begin_drawing(&thread);
-        d.clear_background(Color::WHITE);
-        
-    }
-
+   
 
     image.export_image("output.png");
 }
