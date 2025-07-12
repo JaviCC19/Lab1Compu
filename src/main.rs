@@ -77,8 +77,8 @@ fn main() {
         (321, 335), (288, 286), (339, 251), (374, 302), (321, 335),
     ];
 
-    draw_polygon(&mut image, &points, Color::BLUE);
-    fill_polygon(&mut image, &points, Color::WHITE);
+    draw_polygon(&mut image, &points, Color::WHITE);
+    fill_polygon(&mut image, &points, Color::BLUE);
 
    
 
