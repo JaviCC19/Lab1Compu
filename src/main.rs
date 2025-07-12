@@ -73,15 +73,12 @@ fn main() {
 
     let mut image = Image::gen_image_color(screen_width, screen_height, Color::BLACK);
 
-    let points = vec![
-        (165, 380), (185, 360), (180, 330), (207, 345), (233, 330),
-        (230, 360), (250, 380), (220, 385), (205, 410), (193, 383),
-        (165, 380),
+     let points = vec![
+        (321, 335), (288, 286), (339, 251), (374, 302), (321, 335),
     ];
 
-    draw_polygon(&mut image, &points, Color::WHITE);
-
-    fill_polygon(&mut image, &points, Color::YELLOW);
+    draw_polygon(&mut image, &points, Color::BLUE);
+    fill_polygon(&mut image, &points, Color::WHITE);
 
    
 
